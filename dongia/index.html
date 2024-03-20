@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap5.min.css">
+  <title>Quyết định số 1406/QĐ-UBND ngày 12/12/2022</title>
+</head>
+<body>
+
+
+  <div class="container">
+  <div> 
+  <h5 style="color:Tomato;"><i>Tra Bộ đơn giá dự toán: Xây dựng công trình; Lắp đặt hệ thống kỹ thuật; Sửa chữa và bảo dưỡng công trình xây dựng; Khảo sát xây dựng trên địa bàn tỉnh Quảng Ngãi <b> ban hành kèm theo Quyết định số 1406/QĐ-UBND ngày 12/12/2022 của UBND tỉnh Quảng Ngãi.</b></i></h5>
+  
+</div>
+    <table id="dataTable" class="table table-striped table-bordered">
+      <thead>
+        <tr>
+          <th style="text-align:center;" >STT </th>
+          <th style="text-align:center;" >Mã hiệu công tác</th> 
+          <th style="text-align:center;" >Danh mục công tác</th>
+          <th style="text-align:center;" >Đơn vị</th>
+          <th style="text-align:center;" >Đơn giá vật liệu (đồng)</th>
+          <th style="text-align:center;" >Đơn giá nhân công (đồng)</th>
+          <th style="text-align:center;" >Đơn giá ca máy (đồng)</th>
+          <th style="text-align:center;" >Ký hiệu đơn giá</th>
+        </tr>
+
+      </thead>
+      <tfoot>
+        <tr>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+      </tfoot>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $.ajax({
+        url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vSvii4pqTYDw6smivYlNEEUp8fYPTWGjsemYAnUJOdim03DSbKkGgt_4BaHoBOSwn17vSoJMjZkMFWI/pub?output=csv",
+        dataType: "text",
+        success: function(data) {
+          var parsedData = Papa.parse(data, { header: true }).data;
+          var table = $('#dataTable').DataTable({
+            data: parsedData,
+            columns: [
+              { data: 'STT' },
+              { data: 'Ma_hieu_cong_tac' },
+              { data: 'Danh_muc_cong_tac' },
+              { data: 'Don_vi' },
+              { data: 'Don_gia_vat_lieu' },
+              { data: 'Don_gia_nhan_cong' },
+              { data: 'Don_gia_ca_may' },
+              { data: 'Ky_hieu_don_gia' }
+            ],
+            columnDefs: [
+			  { targets: [2], className: 'text-right' },
+              { targets: [0,1,3,7], className: 'text-center' },
+			  { targets: [4,5,6], className: 'text-end' }
+			   
+            ],
+            responsive: true,
+            initComplete: function() {
+              this.api().columns().every(function() {
+                var column = this;
+                if (column.index() === 1 || column.index() === 7) {
+                  var select = $('<select><option value=""></option></select>')
+                    .appendTo($(column.footer()).empty())
+                    .on('change', function() {
+                      var val = $.fn.dataTable.util.escapeRegex($(this).val());
+                      column.search(val ? '^' + val + '$' : '', true, false).draw();
+                    });
+
+                  column.data().unique().sort().each(function(d, j) {
+                    select.append('<option value="' + d + '">' + d + '</option>');
+                  });
+                }
+              });
+            }
+          });
+        },
+        error: function() {
+          console.log("Không thể lấy dữ liệu từ tệp CSV.");
+        }
+      });
+    });
+  </script>
+</body>
+</html>

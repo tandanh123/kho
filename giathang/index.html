@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap5.min.css">
+  <title>Công bố giá </title>
+</head>
+<body>
+
+
+  <div class="container">
+  <div> 
+  <h5 style="color:Tomato;"><i>Tra giá vật liệu theo tháng, quý <b> do Sở Xây dựng tỉnh Quảng Ngãi công bố.</b></i></h5>
+  
+</div>
+    <table id="dataTable" class="table table-striped table-bordered">
+      <thead>
+        <tr>
+          <th style="text-align:center;" >STT </th>
+          <th style="text-align:center;" >MHVL</th> 
+          <th style="text-align:center;" >Loại vật liệu</th>
+          <th style="text-align:center;" >Đơn vị</th>
+          <th style="text-align:center;" >Tiêu chuẩn</th>
+          <th style="text-align:center;" >Giá tại TT TP QN (đồng)</th>
+          <th style="text-align:center;" >Giá tại nơi sản xuất (đồng)</th>
+          <th style="text-align:center;" >Giá toàn tỉnh (đồng)</th>
+		  <th style="text-align:center;" >Giá tại khu vực cụ thể (đồng)</th>
+		  <th style="text-align:center;" >Nhà cung cấp</th>
+		  <th style="text-align:center;" >Thời điểm thông báo</th>
+		  <th style="text-align:center;" >Ghi chú</th>
+	 </tr>
+
+      </thead>
+      <tfoot>
+        <tr>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+		  <th></th>
+		  <th></th>
+		  <th></th>
+		  <th></th>
+        </tr>
+      </tfoot>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $.ajax({
+        url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vRqPPY83fE0ThjkY5CDJndOpm-gGhk0mEkoUVDzlQi3WrIQxFno2sOVOVM6tlBh1CqWO5i_fGUIrGIf/pub?gid=0&single=true&output=csv",
+        dataType: "text",
+        success: function(data) {
+          var parsedData = Papa.parse(data, { header: true }).data;
+          var table = $('#dataTable').DataTable({
+            data: parsedData,
+            columns: [
+              { data: 'STT' },
+			  { data: 'Ma_hieu_VL' },
+              { data: 'Loai_vat_lieu' },
+              { data: 'Don_vi_tinh' },
+              { data: 'Tieu_chuan_ky_thuat_SX_XX' },
+              { data: 'Tai_trung_tam_TP' },
+              { data: 'Tai_noi_SX' },
+              { data: 'Toan_tinh_QN' },
+              { data: 'Tai_khu_vuc_cu_the' },
+			  { data: 'Nha_cung_cap' },
+			  { data: 'Thoi_diem_TB' },
+			  { data: 'Ghi_chu' }
+            ],
+            columnDefs: [
+			  { targets: [1], className: 'text-right' },
+			  { targets: [2,4], className: 'text-right' },
+              { targets: [0,3], className: 'text-center' },
+			  { targets: [5,6,7,8], className: 'text-end' },
+			  { targets: [9,10,11], className: 'text-center' }
+			   
+            ],
+            responsive: true,
+            initComplete: function() {
+              this.api().columns().every(function() {
+                var column = this;
+                if (column.index() === 1 || column.index() === 2 || column.index() === 3 || column.index() === 4 || column.index() === 5 || column.index() === 6 || column.index() === 7 || column.index() === 8 || column.index() === 9 || column.index() === 10 || column.index() === 11)	{
+                  var select = $('<select><option value=""></option></select>')
+                    .appendTo($(column.footer()).empty())
+                    .on('change', function() {
+                      var val = $.fn.dataTable.util.escapeRegex($(this).val());
+                      column.search(val ? '^' + val + '$' : '', true, false).draw();
+                    });
+
+                  column.data().unique().sort().each(function(d, j) {
+                    select.append('<option value="' + d + '">' + d + '</option>');
+                  });
+                }
+              });
+            }
+          });
+        },
+        error: function() {
+          console.log("Không thể lấy dữ liệu từ tệp CSV.");
+        }
+      });
+    });
+  </script>
+</body>
+</html>
