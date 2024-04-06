@@ -95,7 +95,7 @@
                                  "type": "Layer",
                                  "id": "QH tinhsssawwwa",
                                  "title": "Quy hoạch tỉnh",
-                                 "url": "https://raw.githubusercontent.com/sxdquangngai/dulieu/main/sudungdatdungquat_sahuynh.geojson",
+                                 "url": "https://raw.githubusercontent.com/xaydungquangngai/datasxd/main/QHC_SSD_DUNGQUATSAHUYNH_2022.geojson",
                                  "cocotile": false,
                                  "minZoom": 2,
                                  "maxZoom": 20,
@@ -328,8 +328,8 @@
                       {
                                 "type": "Layer",
                                  "id": "Quy_hoach_phan_khu_1_1",
-                                 "title": "Phân khu 1.1 đường ven biển Dung Quất  - Sa Huỳnh",
-                                 "url": "https://raw.githubusercontent.com/sxdquangngai/dulieu/main/Dungquat-SaHuynh_2000_phankhu1-1.geojson",
+                                 "title": "Phân khu 1.1 đường ven biển Dung Quất  - Sa Huỳnh 2023",
+                                 "url": "https://raw.githubusercontent.com/xaydungquangngai/datasxd/main/QHKP_SDD_PKHU11_2023.geojson",
                                  "cocotile": true,
                                  "minZoom": 5,
                                  "maxZoom": 50,
@@ -380,14 +380,15 @@
 					  {
                       "type": "LayerGroup",
                       "title": "Quy hoạch chung",
-                      "html" : "<div class='layer_text'>Bạn có thể xem các quy hoạch chung</div>",
+                      "html" : "<div class='layer_text'>Bạn có thể xem các quy hoạch chung 2021</div>",
                       "toggleall": false,
                       "entries": [
 					            {
                                 "type": "Layer",
                                  "id": "quy_hoach_chung_2045",
-                                 "title": "quy hoạch chung 2045",
-                                 "url": "https://raw.githubusercontent.com/sxdquangngai/dulieu/main/QHchungTPQN.geojson",
+                                 "title": "Quy hoạch chung năm 2021",
+                                  "html" : "<div class='layer_text'>Quyết định số 949/QĐ-UBND ngày 11/10/2021 của UBND tỉnh Quảng Ngãi về việc phê duyệt đồ án Điều chỉnh Quy hoạch chung xây dựng thành phố Quảng Ngãi đến năm 2040<a href='https://vanban.quangngai.gov.vn/thongtin/filedinhkem/download?maSo=7ea152d22c9d4a6a701ccb53d4463962.pdf'> Tải file</a></div>",
+                                 "url": "https://raw.githubusercontent.com/xaydungquangngai/datasxd/main/QHCSDDthanhpho_2021.geojson",
                                  "cocotile": true,
                                  "minZoom": 5,
                                  "maxZoom": 50,
@@ -476,8 +477,8 @@
 					            {
                                 "type": "Layer",
 								"id": "Quy_hoach_phan_khu_phiaBac",
-                                 "title": "Quy hoạch phân khu phía Bắc ",
-                                 "url": "https://raw.githubusercontent.com/sxdquangngai/dulieu/main/QHPKPHIABACTPQN1-2000.geojson",
+                                 "title": "Quy hoạch phân khu phía Bắc năm 2020",
+                                 "url": "https://raw.githubusercontent.com/xaydungquangngai/datasxd/main/QHPK_SDD_PhiaBac_TP2020.geojson",
 								  "html" : "<div class='layer_text'>Bạn có thể xem các Quy hoạch phân khu......</div>",
                                  "cocotile": true,
                                  "minZoom": 5,
@@ -670,13 +671,50 @@
                       "entries": [
 					            {
                                 "type": "Layer",
-                                 "title": "....",
-                                 "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRgdy36pwdQC79zKDiyCQc7O9dv6xI6TJN0mSCSoCw_OpmQDepSgYujOCkjlvBEOri59_w3V-kxu650/pub?gid=1405862646&single=true&output=csv",
+                                "id": "Quy_hoach_chung_DT_SongVe_2016",
+                                 "title": "QHC đô thị Sông Vệ năm 2016",
+                                 "url": "https://raw.githubusercontent.com/xaydungquangngai/datasxd/main/QHC_SSD_SONGVE_2016.geojson",
                                  "cocotile": true,
                                  "minZoom": 5,
                                  "maxZoom": 50,
-								 "maxNativeZoom": 2
+				 "maxNativeZoom": 2,
+				 "area" : {
+                                  "lat" : 15.036690,
+                                  "lng" : 108.859663,
+                                  "zoom" : 14
+                                  }
+                                },
+			       {
+                                "type": "Layer",
+                                "id": "Quy_hoach_chung_TTMODUC_2023",
+                                 "title": "QHC thị trấn Mộ Đức năm 2023",
+                                 "url": "https://raw.githubusercontent.com/xaydungquangngai/datasxd/main/QHC_SDD_TTMODUC_2023.geojson",
+                                 "cocotile": true,
+                                 "minZoom": 5,
+                                 "maxZoom": 50,
+				 "maxNativeZoom": 2,
+				 "area" : {
+                                  "lat" : 14.940265,
+                                  "lng" : 108.900690,
+                                  "zoom" : 14
+                                  }
+                                },
+			       {
+                                "type": "Layer",
+                                "id": "Quy_hoach_ThachTru_2015",
+                                 "title": "QHC dô thị Thạch Trụ năm 2015",
+                                 "url": "https://raw.githubusercontent.com/xaydungquangngai/datasxd/main/QHC_SDD_THACHTRU_2015.geojson",
+                                 "cocotile": true,
+                                 "minZoom": 5,
+                                 "maxZoom": 50,
+				 "maxNativeZoom": 2,
+				 "area" : {
+                                  "lat" : 14.891394,
+                                  "lng" : 108.926396,
+                                  "zoom" : 15
+                                  }
                                 }
+
                                 ]
                                 },
                                 {
