@@ -214,108 +214,21 @@
                       "toggleall": false,
                       "entries": [
            {
-          "type": "LayerGroup",
+          "type": "Layer",
+          "id": "QHC_Dungquat_2023",
           "title": "Quy hoạch điều chỉnh năm 2023",
+          "url": "https://raw.githubusercontent.com/xaydungquangngai/datasxd/main/Quyhoachchungdungquat_168.geojson",
           "html" : "<div class='layer_text'>Phê duyệt Điều chỉnh tổng thể Quy hoạch chung xây dựng Khu kinh tế Dung Quất, tỉnh Quảng Ngãi đến năm 2045 tại Quyết định số 168/QĐ-TTg ngày28/02/2023</div>",
-          "toggleall": false,
-          "entries": [
-                   
-                  {
-                                 "type": "Layer",
-                                 "id": "QHC_Dungquat_2023",
-                                 "title": "QH Sử dụng đất",
-                                 "url": "https://raw.githubusercontent.com/xaydungquangngai/datasxd/main/Quyhoachchungdungquat_168.geojson",
-                                 "cocotile": true,
-                                 "minZoom": 8,
-                                 "maxZoom": 20,
-                 "maxNativeZoom": 20,
-                  "area" : {
-                                  "lat" : 15.249408,
-                                  "lng" : 108.934937,
-                                  "zoom" : 11
-                                  }
-                                },                      
-                         {
-                           "type": "LayerGroup",
-               "id": "QHC_Dungquat_SaHuynh_SDD",
-                           "title": "Sử dụng đất",
-                           "html" : "<div class='layer_text'>Bạn có thể xem các quy hoạch sử dụng đất</div>",
-                           "toggleall": false,
-                "maxNativeZoom": 20,
-                  "area" : {
-                                  "lat" : 14.95477,
-                                  "lng" : 108.923264,
-                                  "zoom" : 14
-                                  },
-                           "entries": [
-                      {
-                                 "type": "Layer",
-                                 "id": "QH tinhsssawwwa",
-                                 "title": "Quy hoạch tỉnh",
-                                 "url": "https://raw.githubusercontent.com/sxdquangngai/dulieu/main/sudungdatdungquat_sahuynh.geojson",
-                                 "cocotile": false,
-                                 "minZoom": 2,
-                                 "maxZoom": 20,
-                 "maxNativeZoom": 20,
-                  "area" : {
-                                  "lat" : 14.95477,
-                                  "lng" : 108.923264,
-                                  "zoom" : 14
-                                  }
-                                },
-                                      
-                    {
-                                 "type": "Layer",
-                                 "id": "QHC_Dungquat_SaHuynh_SDD",
-                                 "title": "Sử dụng đất",
-                                 "url": "https://raw.githubusercontent.com/sxdquangngai/dichvucong/main/dungquat_sahuynh/QHC_SDD/{z}/{x}/{y}.png",
-                                 "cocotile": false,
-                                 "minZoom": 12,
-                                 "maxZoom": 20,
-                 "maxNativeZoom": 20,
-                  "area" : {
-                                  "lat" : 14.95477,
-                                  "lng" : 108.923264,
-                                  "zoom" : 14
-                                  }
-                                }
-                
-                      ]
-                             
-                                },
-                  {
-                                 "type": "Layer",
-                                 "id": "QHC_Dungquat_SaHuynh_TNM",
-                                 "title": "Thoát nước mưa",
-                                 "url": "https://raw.githubusercontent.com/sxdquangngai/dichvucong/main/dungquat_sahuynh/QHC_TNM/{z}/{x}/{y}.png",
-                                 "cocotile": true,
-                                 "minZoom": 12,
-                                 "maxZoom": 20,
-                 "maxNativeZoom": 20,
-                  "area" : {
-                                  "lat" : 14.95477,
-                                  "lng" : 108.923264,
-                                  "zoom" : 14
-                                  }
-                                },
-                  {
-                                 "type": "Layer",
-                                 "id": "QHC_Dungquat_SaHuynh_CN",
-                                 "title": "Cấp nước",
-                                 "url": "https://raw.githubusercontent.com/sxdquangngai/dichvucong/main/dungquat_sahuynh/QHC_CN/{z}/{x}/{y}.png",
-                                 "cocotile": true,
-                                 "minZoom": 12,
-                                 "maxZoom": 20,
-                 "maxNativeZoom": 20,
-                  "area" : {
-                                  "lat" : 14.95477,
-                                  "lng" : 108.923264,
-                                  "zoom" : 14
-                                  }
-                                }
-                
-                
-          ]
+          "cocotile": true,
+         "minZoom": 8,
+         "maxZoom": 20,
+         "maxNativeZoom": 20,
+         "area" : {
+        "lat" : 15.249408,
+        "lng" : 108.934937,
+        "zoom" : 11
+         }
+
                     }
                                 ]
                                 },
@@ -325,15 +238,53 @@
                       "html" : "<div class='layer_text'>Bạn có thể xem các Quy hoạch phân khu</div>",
                       "toggleall": false,
                       "entries": [
-                      {
+{
                                 "type": "Layer",
-                                 "id": "Quy_hoach_phan_khu_1_1",
-                                 "title": "Phân khu 1.1 đường ven biển Dung Quất  - Sa Huỳnh 2023",
-                                 "url": "https://raw.githubusercontent.com/xaydungquangngai/datasxd/main/QHKP_SDD_PKHU11_2023.geojson",
+				"id": "QHPK_SDD_DTDVDongNamDungQuat_2023",
+                                 "title": "QHPK Khu đô thị, dịch vụ Đông Nam Dung Quất năm 2023",
+                                 "url": "https://raw.githubusercontent.com/xaydungquangngai/datasxd/main/QHPK_SDD_DTDVDongNamDungQuat_2023.geojson",
+				 "html" : "<div class='layer_text'>Bạn có thể xem các Quy hoạch phân khu......</div>",
                                  "cocotile": true,
                                  "minZoom": 5,
                                  "maxZoom": 50,
-                 "maxNativeZoom": 2
+				"maxNativeZoom": 2,
+				 "area" : {
+                                  "lat" : 15.272759,
+                                  "lng" : 108.919830,
+                                  "zoom" : 12
+                                  }								 
+                                },
+{
+                                "type": "Layer",
+				"id": "QHPK_SDD_DTCNDVBinhThanh_2023",
+                                 "title": "QHPK Khu công nghiệp, đô thị, dịch vụ Bình Thanh năm 2023",
+                                 "url": "https://raw.githubusercontent.com/xaydungquangngai/datasxd/main/QHPK_SDD_DTCNDVBinhThanh_2023.geojson",
+				 "html" : "<div class='layer_text'>Bạn có thể xem các Quy hoạch phân khu......</div>",
+                                 "cocotile": true,
+                                 "minZoom": 5,
+                                 "maxZoom": 50,
+				"maxNativeZoom": 2,
+				 "area" : {
+                                  "lat" : 15.268536,
+                                  "lng" : 108.836403,
+                                  "zoom" : 13
+                                  }								 
+                                },
+					            {
+                                "type": "Layer",
+				"id": "QHPK_SDD_DTDVCNTinhPhong_2023",
+                                 "title": "QHPK Khu đô thị, công nghiệp, dịch vụ Tịnh Phong năm 2023",
+                                 "url": "https://raw.githubusercontent.com/xaydungquangngai/datasxd/main/QHPK_SDD_DTDVCNTinhPhong_2023.geojson",
+				  "html" : "<div class='layer_text'>Bạn có thể xem các Quy hoạch phân khu......</div>",
+                                 "cocotile": true,
+                                 "minZoom": 5,
+                                 "maxZoom": 50,
+				"maxNativeZoom": 2,
+				 "area" : {
+                                  "lat" : 15.205267,
+                                  "lng" : 108.786964,
+                                  "zoom" : 13
+                                  }
                                 }
                                 ]
                                 },
@@ -386,7 +337,7 @@
 					            {
                                 "type": "Layer",
                                  "id": "quy_hoach_chung_2045",
-                                 "title": "Quy hoạch chung năm 2021",
+                                 "title": "QHC năm 2021",
                                   "html" : "<div class='layer_text'>Quyết định số 949/QĐ-UBND ngày 11/10/2021 của UBND tỉnh Quảng Ngãi về việc phê duyệt đồ án Điều chỉnh Quy hoạch chung xây dựng thành phố Quảng Ngãi đến năm 2040<a href='https://vanban.quangngai.gov.vn/thongtin/filedinhkem/download?maSo=7ea152d22c9d4a6a701ccb53d4463962.pdf'> Tải file</a></div>",
                                  "url": "https://raw.githubusercontent.com/xaydungquangngai/datasxd/main/QHCSDDthanhpho_2021.geojson",
                                  "cocotile": true,
@@ -460,63 +411,107 @@
                       "entries": [
 					  					            {
                                 "type": "Layer",
-								"id": "Quy_hoach_phan_khu_Trung_tam_TP",
-                                 "title": "Quy hoạch phân khu Trung tâm TP",
+				"id": "Quy_hoach_phan_khu_Trung_tam_TP",
+                                 "title": "QHPK Trung tâm TP năm 2023",
                                  "url": "https://raw.githubusercontent.com/xaydungquangngai/datasxd/main/Quyhoachphankhutrungtamtp2000-712.geojson",
-								  "html" : "<div class='layer_text'>Bạn có thể xem các Quy hoạch phân khu......</div>",
+				  "html" : "<div class='layer_text'>Bạn có thể xem các Quy hoạch phân khu......</div>",
                                  "cocotile": true,
                                  "minZoom": 5,
                                  "maxZoom": 50,
-								 "maxNativeZoom": 2,
-					              "area" : {
+				 "maxNativeZoom": 2,
+				  "area" : {
                                   "lat" : 15.112607,
                                   "lng" : 108.791428,
                                   "zoom" : 14
                                   }								 
                                 },
-					            {
+				{
                                 "type": "Layer",
 								"id": "Quy_hoach_phan_khu_phiaBac",
-                                 "title": "Quy hoạch phân khu phía Bắc năm 2020",
+                                 "title": "QHPK phía Bắc năm 2020",
                                  "url": "https://raw.githubusercontent.com/xaydungquangngai/datasxd/main/QHPK_SDD_PhiaBac_TP2020.geojson",
-								  "html" : "<div class='layer_text'>Bạn có thể xem các Quy hoạch phân khu......</div>",
+				 "html" : "<div class='layer_text'>Bạn có thể xem các Quy hoạch phân khu......</div>",
                                  "cocotile": true,
                                  "minZoom": 5,
                                  "maxZoom": 50,
-								 "maxNativeZoom": 2
+				 "maxNativeZoom": 2
                                 },
-							    {
+				{
                                 "type": "Layer",
-								"id": "Quy_hoach_phan_khu_NghiaDong_NghaaChanh",
-                                 "title": "Quy hoạch phân khu Nghĩa Dõng-Nghĩa Chánh",
-                                 "url": "https://raw.githubusercontent.com/sxdquangngai/dulieu/main/QHPK_NGIADONG_NGHIACHANH.geojson",
-								  "html" : "<div class='layer_text'>Bạn có thể xem các Quy hoạch phân khu......</div>",
+								"id": "QHPK_SDD_PhanConLaiPhiaBacTP_2022",
+                                 "title": "QHPK phần còn lại phía Bắc năm 2022",
+                                 "url": "https://raw.githubusercontent.com/xaydungquangngai/datasxd/main/QHPK_SDD_PhanConLaiPhiaBacTP_2022.geojson",
+				 "html" : "<div class='layer_text'>Bạn có thể xem các Quy hoạch phân khu......</div>",
                                  "cocotile": true,
                                  "minZoom": 5,
                                  "maxZoom": 50,
-								 "maxNativeZoom": 2
+				 "maxNativeZoom": 2
                                 },
-		                        {
+                               {
                                 "type": "Layer",
-								"id": "Quy_hoach_phan_khu_TinhKy_TinhKhe",
-                                 "title": "Quy hoạch phân khu Tịnh Kỳ - Tịnh Khê",
-                                 "url": "https://raw.githubusercontent.com/sxdquangngai/dulieu/main/QHPKTINHKHE-TINHKY.geojson",
-								  "html" : "<div class='layer_text'>Bạn có thể xem các Quy hoạch phân khu......</div>",
+								"id": "QHPK_SDD_NghiaAn_2021",
+                                 "title": "QHPK Nghĩa An năm 2021",
+                                 "url": "https://raw.githubusercontent.com/xaydungquangngai/datasxd/main/QHPK_SDD_NghiaAn_2021.geojson",
+				 "html" : "<div class='layer_text'>Bạn có thể xem các Quy hoạch phân khu......</div>",
                                  "cocotile": true,
                                  "minZoom": 5,
                                  "maxZoom": 50,
-								 "maxNativeZoom": 2
+				 "maxNativeZoom": 2
                                 },
-								{
-								 "type": "Layer",
-								 "id": "Quy_hoach_phan_khu_phia_Tay_Quang_Phu",
-                                 "title": "Quy hoạch phân khu phía Tây Quảng Phú",
-                                 "url": "https://raw.githubusercontent.com/sxdquangngai/dulieu/main/QGPK_TAYQUANG PHU.geojson",
-								  "html" : "<div class='layer_text'>Bạn có thể xem các Quy hoạch phân khu......</div>",
+                               {
+                                "type": "Layer",
+								"id": "QHPK_SDD_TinhKy_TinhKe_2021",
+                                 "title": "QHPK Phần còn lại của xã Tịnh Khê và Tịnh Kỳ năm 2021",
+                                 "url": "https://raw.githubusercontent.com/xaydungquangngai/datasxd/main/QHPK_SDD_TinhKy_TinhKe_2021.geojson",
+				 "html" : "<div class='layer_text'>Bạn có thể xem các Quy hoạch phân khu......</div>",
                                  "cocotile": true,
                                  "minZoom": 5,
                                  "maxZoom": 50,
-								 "maxNativeZoom": 2
+				 "maxNativeZoom": 2
+                                },
+                               {
+                                "type": "Layer",
+				"id": "QHPK_SDD_TinhKy_TinhHoa_2018",
+                                 "title": "QHPK Khu vực Tịnh Kỳ Tịnh Hòa năm 2018",
+                                 "url": "https://raw.githubusercontent.com/xaydungquangngai/datasxd/main/QHPK_SDD_TinhKy_TinhHoa_2018.geojson",
+				 "html" : "<div class='layer_text'>Bạn có thể xem các Quy hoạch phân khu......</div>",
+                                 "cocotile": true,
+                                 "minZoom": 5,
+                                 "maxZoom": 50,
+				 "maxNativeZoom": 2
+                                },
+                               {
+                                "type": "Layer",
+								"id": "QHPK_SDD_NghiaChanh_2021",
+                                 "title": "QHPK Nghĩa Chánh năm 2021",
+                                 "url": "https://raw.githubusercontent.com/xaydungquangngai/datasxd/main/QHPK_SDD_NghiaChanh_2021.geojson",
+				 "html" : "<div class='layer_text'>Bạn có thể xem các Quy hoạch phân khu......</div>",
+                                 "cocotile": true,
+                                 "minZoom": 5,
+                                 "maxZoom": 50,
+				 "maxNativeZoom": 2
+                                },
+                               {
+                                "type": "Layer",
+								"id": "QHPK_SDD_QuangPhu_2021",
+                                 "title": "QHPK Quảng Phú năm 2021",
+                                 "url": "https://raw.githubusercontent.com/xaydungquangngai/datasxd/main/QHPK_SDD_QuangPhu_2021.geojson",
+				 "html" : "<div class='layer_text'>Bạn có thể xem các Quy hoạch phân khu......</div>",
+                                 "cocotile": true,
+                                 "minZoom": 5,
+                                 "maxZoom": 50,
+				 "maxNativeZoom": 2
+                                },
+                               {
+                                "type": "Layer",
+				"id": "QHPK_SDD_PhanConLaiPhiaNam_202",
+                                 "title": "QHPK Phần còn lại phía Nam năm 2022",
+                                 "url": "https://raw.githubusercontent.com/xaydungquangngai/datasxd/main/QHPK_SDD_PhanConLaiPhiaNam_2022.geojson",
+				 "html" : "<div class='layer_text'>Bạn có thể xem các Quy hoạch phân khu......</div>",
+                                 "cocotile": true,
+                                 "minZoom": 5,
+                                 "maxZoom": 50,
+				 "maxNativeZoom": 2
                                 }
                                 ]
                                 },
@@ -551,7 +546,23 @@
                       "html" : "<div class='layer_text'>Bạn có thể xem các quy hoạch chung</div>",
                       "toggleall": false,
                       "entries": [
-					            {
+										            {
+                                "type": "Layer",
+                                 "id": "QHC_SDD_TXDUCPHO_2017",
+                                 "title": "QHC TX Đức Phổ năm 2017",
+                                  "html" : "<div class='layer_text'>Quy hoạch chung thị xã Đức Phổ năm 2017<a href='..'> Tải file</a></div>",
+                                 "url": "https://raw.githubusercontent.com/xaydungquangngai/datasxd/main/QHC_SDD_TXDucPho_2017.geojson",
+                                 "cocotile": true,
+                                 "minZoom": 5,
+                                 "maxZoom": 50,
+				 "maxNativeZoom": 2,
+				 "area" : {
+                                  "lat" : 14.781190,
+                                  "lng" : 108.993301,
+                                  "zoom" : 12
+                                  }
+                                },       
+                               {
                                 "type": "Layer",
                                  "id": "QHC_SDD_TXDUCPHO_2014",
                                  "title": "QHC TX Đức Phổ năm 2014",
@@ -668,8 +679,40 @@
 				 "area" : {
                                   "lat" : 14.851762,
                                   "lng" : 108.948069,
-                                  "zoom" : 15
-                                  }								 
+                                  "zoom" : 15						 
+                                }
+                                },
+                               {
+                                "type": "Layer",
+				"id": "QHPK_SDD_PhoVinh_2023",
+                                 "title": "QHPK TTĐT Phường Phổ Vinh 2022",
+                                 "url": "https://raw.githubusercontent.com/xaydungquangngai/datasxd/main/QHPK_SDD_PhoVinh_2023.geojson",
+								  "html" : "<div class='layer_text'>Bạn có thể xem các Quy hoạch phân khu......</div>",
+                                 "cocotile": true,
+                                 "minZoom": 5,
+                                 "maxZoom": 50,
+				 "maxNativeZoom": 2,
+				 "area" : {
+                                  "lat" : 14.802559,
+                                  "lng" : 109.002657,
+                                  "zoom" : 14		 
+                                }
+                                },
+                               {
+                                "type": "Layer",
+				"id": "QHPK_SDD_SaHuynh_2014",
+                                 "title": "QHPK thị trấn Sa Huỳnh 2014",
+                                 "url": "https://raw.githubusercontent.com/xaydungquangngai/datasxd/main/QHPK_SDD_SaHuynh_2014.geojson",
+								  "html" : "<div class='layer_text'>Bạn có thể xem các Quy hoạch phân khu......</div>",
+                                 "cocotile": true,
+                                 "minZoom": 5,
+                                 "maxZoom": 50,
+				 "maxNativeZoom": 2,
+				 "area" : {
+                                  "lat" : 14.668897,
+                                  "lng" : 109.066317,
+                                  "zoom" : 15		 
+                                }
                                 }
                                 ]
                                 },
@@ -941,6 +984,22 @@
                       "entries": [
 					            {
                                 "type": "Layer",
+                                 "id": "QHCDC_SDD_TTChoChua_2023",
+                                 "title": "QHCĐC thị trấn Chợ Chùa năm 2023",
+                                 "url": "https://raw.githubusercontent.com/xaydungquangngai/datasxd/main/QHCDC_SDD_TTChoChua_2023.geojson",
+                                 "cocotile": true,
+                                 "minZoom": 5,
+                                 "maxZoom": 50,
+			        "maxNativeZoom": 2,
+				 "area" : {
+                                  "lat" : 15.051507,
+                                  "lng" : 108.785419,
+                                  "zoom" : 14
+                                  }
+                                },
+
+					            {
+                                "type": "Layer",
                                  "id": "Quy_hoach_sdd_chochua_2015",
                                  "title": "QHC thị trấn Chợ Chùa năm 2015",
                                  "url": "https://raw.githubusercontent.com/xaydungquangngai/datasxd/main/QHC_SDD_CHOCHUA_2015.geojson",
@@ -1012,12 +1071,18 @@
                       "entries": [
 					            {
                                 "type": "Layer",
-                                 "title": "....",
-                                 "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRgdy36pwdQC79zKDiyCQc7O9dv6xI6TJN0mSCSoCw_OpmQDepSgYujOCkjlvBEOri59_w3V-kxu650/pub?gid=1405862646&single=true&output=csv",
+                                 "id": "QHC_SDD_DTSonTinh_2023",
+                                 "title": "QHC đô thị Sơn Tịnh 2023",
+                                 "url": "https://raw.githubusercontent.com/xaydungquangngai/datasxd/main/QHC_SDD_DTSonTinh_2023.geojson",
                                  "cocotile": true,
                                  "minZoom": 5,
                                  "maxZoom": 50,
-								 "maxNativeZoom": 2
+			        "maxNativeZoom": 2,
+				 "area" : {
+                                  "lat" : 15.157926,
+                                  "lng" : 108.755121,
+                                  "zoom" : 14
+                                  }
                                 }
                                 ]
                                 },
